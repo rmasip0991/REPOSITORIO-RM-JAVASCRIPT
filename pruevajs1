@@ -105,11 +105,19 @@ console.log(".......................")
 
 // Imprimir los numero pares del i al 100 
 
-var i = 2;
+var i = 0;
 while (i <= 100){
     console.log(i)
     i = i + 2
 }
+// o tambien con condicional
+
+var i = 1;
+while(i <= 100) {
+  if (i%2 == 0) {
+    console.log(i);
+  }
+  i=i+1;
 
 console.log(".......................")
 
@@ -135,6 +143,18 @@ while(e < exponente){
 }
 
 console.log(r)
+
+// o tambien 
+
+var exp = 3;
+var base = 2;
+var resultado = 1; 
+
+while(exp > 0) {
+  resultado = resultado * base;
+  exp--;
+}
+console.log(resultado);
 
 
 
