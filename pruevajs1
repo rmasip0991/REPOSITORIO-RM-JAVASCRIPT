@@ -66,11 +66,13 @@ if(n1+n2==n3){
     console.log("el num 3 no es la suma de usu anteriores")
 }
 
+console.log(".......................")
+
 // CON ARRAY
 
 var numeros = [n1, n2, n3];
 if (numeros[2] == numeros [0] + numeros[1]) {
-    console.log("n3 es la sume de n1 y n2");
+    console.log("n3 es la suma de n1 y n2");
 } else {
     console.log("n3 no es la suma de n1 y n2")
 }
