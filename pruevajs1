@@ -75,5 +75,38 @@ if (numeros[2] == numeros [0] + numeros[1]) {
     console.log("n3 no es la suma de n1 y n2")
 }
 
-    console.log(".......................")
+console.log(".......................")
 
+ // BUCLES
+
+// imprimir los numeros de uno al diez de manera automatico para no tener que piar casa intruccion ( console.log(1), console.log(2)...)
+
+ // 1- inicializacion 
+
+ var i = 1;
+ while (i <= 10) { // 2- comparacion
+    console.log(i)
+    // 3- actualizacion
+     i = i + 1
+ }
+
+ console.log(".......................")
+// imprimir los numeros del 20 al 1
+
+var i = 20;
+while (i >= 1){
+    console.log(i)
+    i = i - 1
+}
+
+console.log(".......................")
+
+// imprimir los numero pares del i al 100 
+
+var i = 2;
+while (i <= 100){
+    console.log(i)
+    i = i + 2
+}
+
+console.log(".......................")
