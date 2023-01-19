@@ -112,3 +112,30 @@ while (i <= 100){
 }
 
 console.log(".......................")
+
+
+//Realizar la potencia de dos numeros 
+// con math.pow
+
+
+var potencia = Math.pow(2,3);
+    console.log(potencia)
+
+console.log(".......................")
+
+// con while (bucle)
+
+var base = 2;
+var exponente = 3;
+let r = 1;
+let e = 0; 
+while(e < exponente){
+    r = r * base;
+    e++;
+}
+
+console.log(r)
+
+
+
+console.log(".......................")
