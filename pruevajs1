@@ -1,0 +1,79 @@
+// EJEMPLO DE EL SEMAFORO
+
+var color = "VERDE";
+color = color.toLowerCase();
+
+if(color == "rojo") {
+    console.log("no puedes pasar");
+} else if(color == "ambar"){
+    console.log("precaucion");
+} else if(color == "verde"){
+    console.log("adelante");
+} else 
+    console.log("no entiendo ese color");
+
+console.log("......................")
+
+// CALCULO DE MAYOR DE EDAD
+var edad = 19
+
+if (edad < 18) {
+    console.log("eres mayor de edad");
+} else (
+    console.log("puedes entrar")
+)
+
+console.log("......................")
+
+// MOSTAR EL AMYOR DE DOS NUMEROS
+
+var n1 = 5;
+var n2 = 10;
+
+if (n1>n2){
+    console.log("n1 es mayor que n2");
+}
+if (n2>n1){
+    console.log("n2 es mayor que n1");
+}
+if (n2==n1){
+    console.log("son iguales");
+}
+
+console.log("......................")
+
+// MOSTRAR SI UN NUMERO ES PAR O IMPAR
+
+var num = 4;
+
+if(num%2==0){
+    console.log("el numero "+num+" es par");
+} else{
+    console.log("el numero "+num+" es impar");
+}
+
+console.log("......................")
+
+// dados 3 numeros, indicar si el tercero es la suma de los do primeros o no.
+
+var n1 = 3;
+var n2 = 5;
+var n3 = 8;
+
+if(n1+n2==n3){
+    console.log("el num3 es la suma de sus anteriores")
+} else{
+    console.log("el num 3 no es la suma de usu anteriores")
+}
+
+// CON ARRAY
+
+var numeros = [n1, n2, n3];
+if (numeros[2] == numeros [0] + numeros[1]) {
+    console.log("n3 es la sume de n1 y n2");
+} else {
+    console.log("n3 no es la suma de n1 y n2")
+}
+
+    console.log(".......................")
+
