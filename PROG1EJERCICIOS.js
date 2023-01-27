@@ -212,34 +212,198 @@ console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 //Ejercicio 7 -> Introducir día, mes, año. Comprobar que sean correctos.
 
+var dia = 31;
+var mes = 02;
+var anio = 2022;
 
+
+if (dia <= 0 || dia > 31) {
+    console.log("La fecha es inválida.");
+    
+}
+if (mes <= 0 || mes > 12) {
+    console.log("La fecha es inválida.");
+    
+}
+if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) {
+    console.log("La fecha es inválida.");
+    
+}
+if (mes == 2) {
+    if (dia > 29) {
+        console.log("La fecha es inválida.");
+     
+    }
+    if (dia > 28 && (anio % 4 != 0 || (anio % 100 == 0 && anio % 400 != 0))) {
+        console.log("La fecha es inválida.");
+        
+    }
+}
+
+
+console.log("La fecha es válida.");
+
+
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 //Ejercicio 8 -> Introducir segundos. Mostrar horas, minutos y segundos.
 
+var segundos = 7256;
+
+var horas = (segundos - (segundos % 3600)) / 3600;
+var minutos = ((segundos % 3600) - ((segundos % 3600) % 60)) / 60;
+var sobraSegundos = segundos % 60;
+
+console.log(`${horas} horas, ${minutos} minutos y ${sobraSegundos} segundos`); 
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 // SWITCH
 
 //Ejercicio 1: Preguntar el número del día de la semana. Mostrar que dia es.
 //Ejemplo: 1 -> Lunes
  
+var dia = "1";
+
+switch(dia) {
+    case "1":
+        console.log("Lunes");
+        break;
+    case "2":
+        console.log("Martes");
+        break;
+    case "3":
+        console.log("Miércoles");
+        break;
+    case "4":
+        console.log("Jueves");
+        break;
+    case "5":
+        console.log("Viernes");
+        break;
+    case "6":
+        console.log("Sábado");
+        break;
+    case "7":
+        console.log("Domingo");
+        break;
+    default:
+        console.log("Ingresa un número entre 1 y 7");
+
+}
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
 //Ejercicio 2: Ampliar el ejercicio 1 para que acepte mes y día.
 //Ejemplo: 1 1 -> Lunes de Enero
+
+var dia = "1";
+var mes = "1";
+
+
+switch(mes) {
+    case "1":
+        switch(dia){
+            case "1":
+                console.log("lunes 1 de Enero");
+                break;
+            case "2":
+                console.log("martes 2 de Enero");
+                break;
+            //...
+            case "31":
+
+                console.log("jueves 31 de Enero");
+                break;
+            default:
+                console.log("Ingresa un día válido para Enero");
+            }
+        }
+        
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
  
 //Ejercicio 3: Preguntar la edad. En función de esta mostrar:
         	//- Si tiene 0 -> Acabas de nacer
         	//- Si tiene más de 0 y menos de 18 -> Eres menor de edad
         	//- Si tiene 18 o más y menos de 65 -> Eres mayor de edad
         	//- Si tiene más de 65 -> Ya puedes jubilarte.
- 
+
+var edad = 25;
+
+switch(true){
+    case edad == 0:
+        console.log("Acabas de nacer");
+        break;
+    case edad < 18:
+        console.log("Eres menor de edad");
+        break;
+    case edad >= 18 && edad < 65:
+        console.log("Eres mayor de edad");
+        break;
+    case edad >= 65:
+        console.log("Ya puedes jubilarte");
+        break;
+}
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
 //Ejercicio 4: Consulta del médico. Preguntar al usuario si tiene dolor de cabeza, tos o ninguno de los anteriores.
  
 //-   	Si tiene dolores de cabeza preguntar si tiene problemas estomacales. Si los tiene mostrar que ha de tomar paracetamol, sino aspirina.
 //-   	Si tiene tos preguntar cuántos años tiene, si es menos de 12 mostrar que debe tomar caramelos de miel, sino de eucalipto.
 //-   	Si no tiene ninguno de los síntomas anteriores mostrar que tiene que acudir a la consulta.
+
+var sintoma = "dolor de cabeza";
+
+switch(sintoma){
+    case "dolor de cabeza":
+        var estomacal = "no";
+        if(estomacal === "si"){
+            console.log("Debes tomar paracetamol");
+        } else {
+            console.log("Debes tomar aspirina");
+        }
+        break;
+    case "tos":
+        var edad = "18";
+        if(edad < 12){
+            console.log("Debes tomar caramelos de miel");
+        } else {
+            console.log("Debes tomar caramelos de eucalipto");
+        }
+        break;
+    case "ninguno de los anteriores":
+        console.log("Debes acudir a la consulta");
+        break;
+    default:
+        console.log("Opción no válida");
+}
  
-//Ejercicio 5: Preguntar al usuario en qué planta se encuentra: 0, 1, 2. A continuación preguntarle cuántos pisos quiere subir/bajar: 1 o 2. Indicarle en qué planta está, teniendo en cuenta que solo hay 3 plantas.
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
+//Ejercicio 5: Preguntar al usuario en qué planta se encuentra: 0, 1, 2. 
+//A continuación preguntarle cuántos pisos quiere subir/bajar: 1 o 2. 
+//Indicarle en qué planta está, teniendo en cuenta que solo hay 3 plantas.
 
+var plantaActual = 0;
+var pisos = 2;
 
+plantaActual += pisos;
 
+switch (plantaActual) {
+    case 0:
+        console.log("Te encuentras en la planta 0, es la planta más baja");
+        break;
+    case 1:
+        console.log("Te encuentras en la planta 1");
+        break;
+    case 2:
+        console.log("Te encuentras en la planta 2, es la planta más alta");
+        break;
+    default:
+        console.log("Sólo hay 3 plantas, te encuentras en la planta " + (plantaActual < 0 ? 0 : 2));
+}
 
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
