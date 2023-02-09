@@ -407,3 +407,154 @@ switch (plantaActual) {
 }
 
 console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
+// Ejercicio 1 -> Declarar una variable numérica. Mostrar todos los números pares en formato decreciente.
+const numero = 20;
+for (let i = numero; i > 0; i--) {
+  if (i % 2 == 0) {
+    console.log(i);
+  }
+}
+// Ejercicio 2 -> Declarar una variable numérica. 
+// Después imprimir hasta ese número los números impares concatenado con el texto “es impar”.
+let num = 20;
+
+for (let i = 1; i < num; i++) {
+  if (i % 2 != 0) {
+    console.log(i + " es impar");
+  }
+}
+
+// Ejercicio 3: Recrear la siguiente imagen.
+let asterisco = "*";
+for (let i = 0; i < 20; i++) {
+  console.log(asterisco);
+  asterisco += "*";
+}
+
+// Ejercicio 4 -> Crear un número e ir sumando ese número hasta que llegue a 100. 
+// Mostrando su estado y viendo al final el número de veces que ha sido necesario sumar hasta llegar a 100.
+let n = 20;
+let limite = 100 / n;
+let resultado = 0;
+for (let i = 1; i <= limite; i++) {
+  resultado += n;
+  console.log(resultado);
+}
+console.log("Se ha sumado el numero " + limite + " veces");
+
+// Ejercicio 1: Preguntarle al usuario cuántos números quiere introducir. 
+// Almacenar esa cantidad de números aleatorios(1 al 10) en un array, y luego imprimir los números pares.
+
+// Math.floor(Math.random() * 10 + 1)
+var cant_numeros = 10;
+var numeros_array = [];
+// Math.floor: static method always rounds down and returns the largest integer less than or equal to a given number.
+// Math.random() :static method returns a floating - point, pseudo - random number that's greater than or equal to 0 and less than 1
+for (let i = 0; i < cant_numeros; i++) {
+  numeros_array[i] = Math.floor(Math.random() * 10 + 1);
+  // cant_numeros.push(Math.floor(Math.random() * 10 + 1));
+}
+console.log(numeros_array);
+
+console.log("-------------------------------")
+for (let i = 0; i < numeros_array.length; i++) {
+  if (numeros_array[i] % 2 == 0) {
+    console.log(numeros_array[i]);
+  }
+}
+console.log("-------------------------------")
+// Ejercicio 2: Programa que pide un numero al usuario y la potencia a la que lo quiere elevar y mostrar el resultado.
+var base = 2;
+var exp = 2;
+var potencia = 1;
+
+for (let i = 0; i < exp; i++) {
+  potencia = potencia * base;
+}
+console.log(potencia);
+console.log("-------------------------------")
+// Ejercicio 3: Almacenar 10 números en un array e imprimir la suma de los últimos 5 valores ingresados.
+var array = []
+for (let i = 0; i < 10; i++) {
+  array[i] = Math.floor(Math.random() * 10 + 1);
+}
+console.log(array);
+
+var total = 0;
+for (let i = 5; i < array.length; i++) {
+  total += array[i]
+}
+console.log(total);
+
+// Ejercicio 4: Crear la tabla de multiplicar de 10 x 10.
+
+// 10x0=0
+// 10x1=10 ... 
+
+for (let i = 0; i < 11; i++) {
+  // console.log("10x"+i+"="+(10*i));
+  console.log(`10x${i}=${10 * i}`);
+}
+
+// Ejercicio 5: Comprobar si un número introducido por el usuario es primo o no.
+
+var numero_ = 6;
+var primo = true;
+
+for (let i = 2; i < numero_; i++) {
+  if (numero_ % i == 0) { // no es primo
+    primo = false;
+    break;
+  }
+}
+
+if (primo) {
+  console.log("Es primo");
+} else {
+  console.log("No es primo");
+}
+
+// Almacenar los nombres de los compañeros
+// de clase, y aleatoriamente devolver uno 
+// de ellos.
+
+const compis = ["DaniS", "Soliman", "Vlad", "Agus", "DaniG", "Mily", "Isra", "Armand", "Oscar"];
+
+const cant_compis = compis.length;
+const aleatorios = Math.floor(Math.random() * cant_compis);
+
+console.log(compis[aleatorios]);
+console.log("------------------------------");
+// Calcular el factorial de un numero
+var _numero = 20; // 120
+var factorial = 1;
+for(let i = _numero;  i >= 1; i--) {
+  factorial = factorial * i;
+  // factorial *= i;
+}
+console.log(factorial);
+
+
+
+// triangulo
+
+var _asterisco = "*";
+var _espacio = " ";
+var _triangulo = "";
+var _mitad_triangulo = 40;
+var _vuelta_linea = 1;
+
+for(let y = 0; y < 20; y++) {
+  for (let x = 0; x < 80; x++) {
+    _triangulo += _espacio;
+    for (let z = 0; z < _vuelta_linea; z++) {
+      if (x === _mitad_triangulo-z) {
+        _triangulo += _asterisco;
+      }
+    }
+  }
+  _vuelta_linea += 2;
+  _triangulo += "\n";
+}
+console.log(_triangulo);
