@@ -409,12 +409,15 @@ switch (plantaActual) {
 console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 // Ejercicio 1 -> Declarar una variable numérica. Mostrar todos los números pares en formato decreciente.
-const numero = 20;
+var numero = 20;
 for (let i = numero; i > 0; i--) {
   if (i % 2 == 0) {
     console.log(i);
   }
 }
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
 // Ejercicio 2 -> Declarar una variable numérica. 
 // Después imprimir hasta ese número los números impares concatenado con el texto “es impar”.
 let num = 20;
@@ -425,12 +428,16 @@ for (let i = 1; i < num; i++) {
   }
 }
 
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
 // Ejercicio 3: Recrear la siguiente imagen.
 let asterisco = "*";
 for (let i = 0; i < 20; i++) {
   console.log(asterisco);
   asterisco += "*";
 }
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 // Ejercicio 4 -> Crear un número e ir sumando ese número hasta que llegue a 100. 
 // Mostrando su estado y viendo al final el número de veces que ha sido necesario sumar hasta llegar a 100.
@@ -442,6 +449,8 @@ for (let i = 1; i <= limite; i++) {
   console.log(resultado);
 }
 console.log("Se ha sumado el numero " + limite + " veces");
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 // Ejercicio 1: Preguntarle al usuario cuántos números quiere introducir. 
 // Almacenar esa cantidad de números aleatorios(1 al 10) en un array, y luego imprimir los números pares.
@@ -487,6 +496,9 @@ for (let i = 5; i < array.length; i++) {
 }
 console.log(total);
 
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
+
 // Ejercicio 4: Crear la tabla de multiplicar de 10 x 10.
 
 // 10x0=0
@@ -496,6 +508,9 @@ for (let i = 0; i < 11; i++) {
   // console.log("10x"+i+"="+(10*i));
   console.log(`10x${i}=${10 * i}`);
 }
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
 
 // Ejercicio 5: Comprobar si un número introducido por el usuario es primo o no.
 
@@ -514,6 +529,8 @@ if (primo) {
 } else {
   console.log("No es primo");
 }
+
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 // Almacenar los nombres de los compañeros
 // de clase, y aleatoriamente devolver uno 
@@ -558,3 +575,4 @@ for(let y = 0; y < 20; y++) {
   _triangulo += "\n";
 }
 console.log(_triangulo);
+
